@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Api extends CI_Controller {
+class Api_location extends CI_Controller {
 
-	public function getUsers()
+	public function getLocations()
 	{
 		$this->db->select('*');
-		$this->db->from('users');
+		$this->db->from('locations');
 		$res = $this->db->get()->result_array();
         echo json_encode($res);
 	}
